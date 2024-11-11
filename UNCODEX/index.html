@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.data reader</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+    <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap"></link>
+
+</head>
+<body>
+<div id="BackGround">
+<div id="BodyContainer">
+    <div class="ProgressBar" id="ProgressBar0">
+        <div style = "--c:#6638ff96" class="innerProgressDiv"></div>
+    </div>
+    <div id="ContainerDiv2">
+    <div id="MidDiv">
+    <h1 style="font-size: 40px;" class="text">Ʉ₦₵ØĐɆӾ</h1>
+    <h1 style="font-size: 15px;" class="text">created by: wuser.</h1>
+    <div id="ButtonsDiv">
+    <button class="Button" id="FileInputButton">Load File</button>
+    <button class="Button" id="DownloadButton" style="display:none">Download as Zip</button>
+    <button class="Button" id="PackFileButton" style="display:none">Pack Into One File</button>
+    </div>
+    <input type="file" id="fileInput" accept=".data,.br,.unityweb, .unity3d, .zip" style="display: none;"/>
+    <div id="fileExplorer"></div>
+    </div>
+    <div id="output">
+        <div id="signatureInput"></div>
+        <div id="fileoutput">
+         <div id="filePreview"></div>
+        </div>
+        <div id="selectedReference"></div>
+    </div>
+</div>
+</div>
+<div id="TitleContainer">Ʉ₦₵ØĐɆӾ</div>
+</div>
+    <script type="module">
+        import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/build/three.module.js';
+        import {OrbitControls} from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/examples/jsm/controls/OrbitControls.js';
+        import {OBJLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/examples/jsm/loaders/OBJLoader.js';
+        import {MTLLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/examples/jsm/loaders/MTLLoader.js';
+        import {OBJExporter} from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/examples/jsm/exporters/OBJExporter.js';
+        window.THREE=THREE,
+        window.OrbitControls=OrbitControls,
+        window.OBJLoader=OBJLoader,
+        window.MTLLoader=MTLLoader,
+        window.OBJExporter=OBJExporter;
+        let script = document.createElement("script");
+        script.src = "background.js";
+        document.body.appendChild(script)
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="Enum.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
